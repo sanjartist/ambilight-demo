@@ -24,9 +24,11 @@
     .ambilight {
       position: relative;
       width: 60vw;
+      display: none;
+    }
+    .video-wrapper {
       border-radius: 8px;
       overflow: hidden;
-      display: none;
     }
     .ambilight video {
       width: 100%;
@@ -35,8 +37,9 @@
     .background {
       position: absolute;
       inset: 0;
-      filter: blur(60px);
-      transform: scale(1.2);
+      object-fit: cover;
+      filter: blur(60px) brightness(1.2);
+      transform: scale(1.4);
       pointer-events: none;
       z-index: 0;
     }
@@ -55,8 +58,10 @@
     <input type="file" id="video-file" accept="video/*">
   </div>
   <div class="ambilight" id="ambilight">
-    <video class="background" muted autoplay loop></video>
-    <video class="foreground" controls></video>
+    <video class="background" muted></video>
+    <div class="video-wrapper">
+      <video class="foreground" controls></video>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
