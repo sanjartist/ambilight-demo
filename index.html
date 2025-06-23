@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ambilight Demo</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .ambilight {
+      position: relative;
+      box-shadow: 0 0 100px 40px #0ff;
+    }
+    video {
+      width: 60vw;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ambilight">
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls autoplay loop></video>
+  </div>
+</body>
+</html>
